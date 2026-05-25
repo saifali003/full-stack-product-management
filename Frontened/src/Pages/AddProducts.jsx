@@ -18,25 +18,27 @@ export default function AddProducts() {
   };
 
   const addProduct = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await axios.post(
-       "https://full-stack-product-management.onrender.com/api/product/add",
-        formData
-);
-      );
-      alert(res.data.message);
-      setFormData({
-        name: "",
-        description: "",
-        category: "",
-        price: "",
-        imageSrc: "",
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  e.preventDefault();
+
+  try {
+    const res = await axios.post(
+      "https://full-stack-product-management.onrender.com/api/product/add",
+      formData
+    );
+
+    alert(res.data.message);
+
+    setFormData({
+      name: "",
+      description: "",
+      category: "",
+      price: "",
+      imageSrc: "",
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 
   return (
     <div className="flex justify-center items-center py-10 px-4">
