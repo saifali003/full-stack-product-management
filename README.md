@@ -29,7 +29,25 @@ A full-stack Product Management System built using the MERN Stack. Users can add
 - MongoDB
 - Mongoose
 
+## Project Structure
 
+```
+Product-Management-System
+│
+├── Frontend
+│   ├── src
+│   ├── public
+│   └── package.json
+│
+├── Backend
+│   ├── Config
+│   ├── Controller
+│   ├── Models
+│   ├── Routes
+│   ├── server.js
+│   └── package.json
+│
+└── README.md
 ```
 
 ## API Endpoints
@@ -112,7 +130,8 @@ https://full-stack-product-management-frontened.onrender.com
 Backend:
 https://full-stack-product-management.onrender.com
 
-cs
 
 
-This project is open source and available under the MIT License.
+
+
+
