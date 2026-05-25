@@ -21,7 +21,7 @@ export default function AddProducts() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/product/add",
+        "https://full-stack-product-management.onrender.com",
         formData
       );
       alert(res.data.message);
