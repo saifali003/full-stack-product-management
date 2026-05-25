@@ -16,8 +16,8 @@ export default function ShowProducts() {
   const fetchProducts = async () => {
     try {
       const res = await axios.get(
-        "https://full-stack-product-management.onrender.com"
-      );
+       "https://full-stack-product-management.onrender.com/api/product/all"
+    );
       setProducts(res.data.products);
     } catch (error) {
       console.log(error);
@@ -31,8 +31,8 @@ export default function ShowProducts() {
   const deleteProduct = async (id) => {
     try {
       await axios.delete(
-        `https://full-stack-product-management.onrender.com`
-      );
+      `https://full-stack-product-management.onrender.com/api/product/${id}`
+);
       fetchProducts();
     } catch (error) {
       console.log(error);
@@ -63,9 +63,9 @@ export default function ShowProducts() {
 
     try {
       await axios.put(
-        `https://full-stack-product-management.onrender.com`,
-        formData
-      );
+  `https://full-stack-product-management.onrender.com/api/product/${editId}`,
+  formData
+);
 
       setEditId(null);
 
