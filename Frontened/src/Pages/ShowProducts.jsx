@@ -16,7 +16,7 @@ export default function ShowProducts() {
   const fetchProducts = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:8000/api/product/all"
+        "https://full-stack-product-management.onrender.com"
       );
       setProducts(res.data.products);
     } catch (error) {
@@ -31,7 +31,7 @@ export default function ShowProducts() {
   const deleteProduct = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:8000/api/product/${id}`
+        `https://full-stack-product-management.onrender.com`
       );
       fetchProducts();
     } catch (error) {
@@ -63,7 +63,7 @@ export default function ShowProducts() {
 
     try {
       await axios.put(
-        `http://localhost:8000/api/product/${editId}`,
+        `https://full-stack-product-management.onrender.com`,
         formData
       );
 
